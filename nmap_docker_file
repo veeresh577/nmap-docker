@@ -1,0 +1,27 @@
+FROM ubuntu
+
+MAINTAINER naruto Uzumaki
+
+RUN echo "Installing necessary packages"
+
+RUN apt-get update -y && apt install nmap -y && apt install xsltproc -y 
+RUN apt install net-tools -y 
+RUN apt install iputils-ping -y  && apt install python3-pip -y 
+RUN pip3 install openpyxl && pip3 install configparser && pip3 install regex 
+RUN apt install git -y
+	
+#RUN apt install python3
+
+WORKDIR /opt/
+
+RUN mkdir reports
+
+COPY  Nmap_test_plan.xlsx nmap_runner.py setting.ini /opt/
+
+#VOLUME /home/naruto/Desktop/docker/nmap_auto/ /opt/
+
+RUN git clone https://github.com/vulnersCom/nmap-vulners.git
+
+RUN git clone https://github.com/scipag/vulscan scipag_vulscan
+
+CMD ["python3","nmap_runner.py"]

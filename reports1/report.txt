@@ -1,0 +1,57 @@
+--------------------------------------------------------------------------------
+INFO
+Test_1
+command --> nmap -n -T4  127.0.0.1
+--------------------------------------------------------------------------------
+INFO
+OS_detection
+command --> nmap -O 127.0.0.1
+--------------------------------------------------------------------------------
+INFO
+Detect_service/daemon_versions
+command --> nmap -sV 127.0.0.1
+--------------------------------------------------------------------------------
+INFO
+popular_top_20_ports
+command --> nmap --top-ports 20 127.0.0.1
+--------------------------------------------------------------------------------
+INFO
+TCP_protocols
+command --> nmap -sT 127.0.0.1
+--------------------------------------------------------------------------------
+INFO
+UDP_protocols
+command --> nmap -sU 127.0.0.1
+--------------------------------------------------------------------------------
+telnet
+25/tcp   closed smtp
+53/tcp   closed domain
+80/tcp   closed http
+110/tcp  closed pop3
+111/tcp  closed rpcbind
+135/tcp  closed msrpc
+139/tcp  closed netbios-ssn
+143/tcp  closed imap
+443/tcp  closed https
+445/tcp  closed microsoft-ds
+993/tcp  closed imaps
+995/tcp  closed pop3s
+1723/tcp closed pptp
+3306/tcp closed mysql
+3389/tcp closed ms-wbt-server
+5900/tcp closed vnc
+8080/tcp closed http-proxy
+
+Nmap done: 1 IP address (1 host up) scanned in 0.22 seconds
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-03-05 06:22 UTC
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00016s latency).
+All 1000 scanned ports on localhost (127.0.0.1) are closed
+
+Nmap done: 1 IP address (1 host up) scanned in 0.08 seconds
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-03-05 06:22 UTC
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0000080s latency).
+All 1000 scanned ports on localhost (127.0.0.1) are closed
+
+Nmap done: 1 IP address (1 host up) scanned in 0.24 seconds

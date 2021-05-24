@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+ nmap1:
+  build: 
+   context: .
+   dockerfile: nmap_docker_file
+  networks:
+   - host
+  volumes:
+   - .:/opt/
+networks:
+ host:
+
+   
+ 
+   
